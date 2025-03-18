@@ -16,22 +16,55 @@
   })
 </script>
 
-<div class="container" style="padding: 50px 0 100px 0">
-  {#if !session}
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-2xl font-bold mb-4">Welcome to the App</h1>
-      <p class="mb-6">Please sign in to access your account.</p>
-      <a href="/login" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
-        Sign In
-      </a>
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center">
+      <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+        <span class="block">Welcome to</span>
+        <span class="block text-blue-600">Your App</span>
+      </h1>
+      <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+        A modern application built with Svelte and Supabase
+      </p>
     </div>
-  {:else}
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-2xl font-bold mb-4">Welcome back!</h1>
-      <p class="mb-6">You are currently signed in.</p>
-      <a href="/account" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded">
-        Go to Account
-      </a>
+
+    <div class="mt-10 flex justify-center">
+      {#if !session}
+        <div class="rounded-md shadow">
+          <a
+            href="/login"
+            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+          >
+            Get Started
+          </a>
+        </div>
+      {:else}
+        <div class="rounded-md shadow">
+          <a
+            href="/account"
+            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
+          >
+            Go to Account
+          </a>
+        </div>
+      {/if}
     </div>
-  {/if}
+
+    <div class="mt-10">
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+          <span class="px-2 bg-white text-gray-500">
+            {#if session}
+              You are currently signed in
+            {:else}
+              Please sign in to access your account
+            {/if}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
