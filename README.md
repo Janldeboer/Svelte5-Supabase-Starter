@@ -1,27 +1,34 @@
-# sv
+# Svelte5 + Supabase Starter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A minimal template for building Svelte5 applications with Supabase integration, including generic pages for `/login` and `/account`.
 
-## Creating a project
+## Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Create a project on [Supabase](https://supabase.com)
+2. Rename `.env.example` to `.env` and paste in your `SUPABASE_URL` and `SUPABASE_ANON_KEY` from the project
+3. Install dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
+
+## OAuth Setup
+
+The template includes Google OAuth and GitHub OAuth.
+Setup instructions to follow.
+(Essentially it boils down to creating projects in their respective dev platforms and pasting some values into Supabase)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've completed the setup, you can start a development server:
 
 ```bash
 npm run dev
+```
 
-# or start the server and open the app in a new browser tab
+or start the server and open the app in a new browser tab
+
+```
 npm run dev -- --open
 ```
 
@@ -37,44 +44,11 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-## Settings used
+## Template Details
 
-```
-┌  Welcome to the Svelte CLI! (v0.6.26)
-│
-◇  Which template would you like?
-│  SvelteKit minimal
-│
-◇  Add type checking with TypeScript?
-│  Yes, using TypeScript syntax
-│
-◆  Project created
-│
-◇  What would you like to add to your project? (use arrow keys / space bar)
-│  prettier, eslint, tailwindcss
-│
-◇  tailwindcss: Which plugins would you like to add?
-│  typography, forms
-│
-◆  Successfully setup add-ons
-│
-◇  Which package manager do you want to install dependencies with?
-│  npm
-│
-◆  Successfully installed dependencies
-│
-◇  Successfully formatted modified files
-│
-◇  Project next steps ─────────────────────────────────────────────────────╮
-│                                                                          │
-│  1: git init && git add -A && git commit -m "Initial commit" (optional)  │
-│  2: npm run dev -- --open                                                │
-│                                                                          │
-│  To close the dev server, hit Ctrl-C                                     │
-│                                                                          │
-│  Stuck? Visit us at https://svelte.dev/chat                              │
-│                                                                          │
-├──────────────────────────────────────────────────────────────────────────╯
-│
-└  You're all set!
-```
+This template was created using `npx sv create` with the following options:
+
+- SvelteKit minimal template
+- TypeScript with TypeScript syntax
+- Add-ons: prettier, eslint, tailwindcss (with typography and forms plugins)
+- Package manager: npm
