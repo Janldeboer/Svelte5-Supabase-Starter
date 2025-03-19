@@ -9,7 +9,7 @@
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: providerEnum,
       options: {
-        redirectTo: 'https://example.com/welcome'
+        redirectTo: window.location.origin
       }
     })
   }
