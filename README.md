@@ -48,7 +48,7 @@ For more information check [Googles documentation](https://developers.google.com
 #### GitHub OAuth
 
 1. Register a new OAuth App in [GitHub Settings -> Developer Settings -> OAuth Apps](https://github.com/settings/applications/new)
-2. Use `http://localhost:3000/` as `Homepage URL` (device flow not needed)
+2. Insert your `Homepage URL`. You can use `http://localhost:3000/` if you are just not hosting it. Device flow is not needed.
 3. Add the Supabase callback URL to the `Authorization callback URL` field
 4. After registration, note your `Client ID` and generate a `Client Secret` to use in Supabase
 
