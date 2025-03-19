@@ -1,6 +1,8 @@
 # Svelte5 + Supabase Starter
 
-A minimal template for building Svelte5 applications with Supabase integration, including generic pages for `/login` and `/account`.
+A minimal template for building Svelte5 applications with Supabase integration, including generic pages for `/login` and `/account` and OAuth login via Google or GitHub.
+
+[🔮 Live Demo](https://svelte5-supabase-starter.vercel.app/)
 
 ## Setup
 
