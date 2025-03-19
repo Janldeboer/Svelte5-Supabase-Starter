@@ -91,6 +91,19 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
+## Deployment
+
+### Vercel
+
+The easiest way to deploy this app is to use the [Vercel Platform](https://vercel.com).
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjanldeboer%2FSvelte5-Supabase-Starter&env=VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY&envDescription=API%20keys%20needed%20for%20Supabase%20authentication&project-name=svelte5-supabase-starter&repository-name=svelte5-supabase-starter)
+
+When deploying to Vercel, make sure to:
+
+1. Set the required environment variables (VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY)
+2. Go to Supabase _Authentication -> URL Configuration_ and use your deployment URL as _Site URL_ (or at least add it as a _Redirect URL_)
+
 ## Template Details
 
 This template was created using `npx sv create` with the following options:
